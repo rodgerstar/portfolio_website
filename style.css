@@ -376,3 +376,20 @@ span {
     font-size: 1.5rem;
     padding-top: .5rem;
 }
+.skills{
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: linear-gradient(190deg, #000000, #46623b, #4ac816);
+}
+.skills .skillsRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.skillsRow .skillsColumn {
+    flex: 1 1 40rem;
+}
+.skillsColumn .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
