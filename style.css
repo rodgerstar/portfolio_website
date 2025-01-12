@@ -534,3 +534,47 @@ span {
 .contact form .btnBox .btns .btn {
     cursor: pointer;
 }
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: linear-gradient(190deg, #000000, #4a3a0d, #113008);
+}
+.footerText p {
+    font-size: 1.6rem;
+}
+.footerIconTop a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: linear-gradient(240deg,  #aa7f1d, #000000);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+}
+.footerIconTop a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(190deg, #1b490b,#4a3a0d);
+    z-index: -1;
+    transition: .5s;
+}
+.footerIconTop a:hover::before {
+    width: 100%;
+}
+.footerIconTop a i {
+    color: var(--main-color);
+    font-size: 2.4rem;
+}
+.footerIconTop a:hover i {
+    color: var(--main-color);
+}
