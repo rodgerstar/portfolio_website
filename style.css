@@ -126,7 +126,7 @@ section{
     align-items: center;
     width: 12rem;
     height: 100%;
-    background: var(--main-color);
+    background: linear-gradient(190deg, #4a3a0d, #0f2b05);
     border: .2rem solid var(--main-color);
     border-radius: .8rem;
     font-size: 1.6rem;
@@ -142,7 +142,6 @@ section{
     background: transparent;
     color: var(--main-color);
 }
-
 .btnBox .btn:nth-child(2):hover {
     color: black;
 }
@@ -194,7 +193,7 @@ section{
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--main-color);
+    background: linear-gradient(190deg, #4a3a0d, #215c0c);
     z-index: -1;
     transition: .3s;
 }
@@ -213,8 +212,8 @@ section{
 }
 
 .homeImgHover:hover {
-    background: var(--bg-color);
-    opacity: .8;
+    background: linear-gradient(190deg, #9c7724, #1d4e0b);
+    opacity: .7;
 }
 .about {
     display: flex;
@@ -352,7 +351,7 @@ span {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--second-bg-color);
+    background: linear-gradient(190deg, #4a3a0d, #215c0c);
     z-index: -1;
     transition: .5s;
 }
@@ -408,7 +407,7 @@ span {
     left: 0;
     width: 0;
     height: 100%;
-    background: #372503;
+    background: linear-gradient(190deg, #4a3a0d, #215c0c);
     z-index: -1;
     transition: .5s;
 }
@@ -465,4 +464,73 @@ span {
 }
 .skillsColumn:nth-child(2) .skillsContent .progress:nth-child(4) .bar span {
     width: 80%;
+}
+
+.contact{
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: linear-gradient(190deg, #000000, #215c0c,#4a3a0d);
+}
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.contact form .inputBox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.contact .textareaField{
+    z-index: 1;
+}
+.contact form .inputBox .inputField {
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+.contact form .inputBox .inputField input,
+.contact form .textareaField textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--bg-color);
+}
+.contact form .inputBox .inputField input::placeholder,
+.contact form .textareaField textarea::placeholder {
+    color: var(--text-color);
+}
+.contact form .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(190deg, #1b490b,#4a3a0d);
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s;
+}
+.contact form .inputBox .inputField input:focus~.focus,
+.contact form .inputBox .inputField input:valid~.focus,
+.contact form .textareaField textarea:focus~.focus,
+.contact form .textareaField textarea:valid~.focus{
+    width: 100%;
+}
+.contact form .textareaField {
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+.contact form .textareaField textarea {
+    resize: none;
+}
+.contact form .btnBox .btns .btn {
+    cursor: pointer;
 }
