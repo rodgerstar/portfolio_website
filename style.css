@@ -81,7 +81,7 @@ body {
 section {
     min-height: 100vh;
     padding: 10rem 8% 2rem;
-    background: url("/images/t9.png");
+    background: url("images/t9.png");
     /*margin-left: 80px;*/
     background-size: cover;
     background-position: center;
