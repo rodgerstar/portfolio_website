@@ -74,7 +74,7 @@ body{
 section{
     min-height: 100vh;
     padding: 10rem 8% 2rem;
-    background: url("/images/t6.png");
+    background: url("/images/t9.png");
     /*margin-left: 80px;*/
     background-size: cover;
     background-position: center;
@@ -88,6 +88,7 @@ section{
 
 .homeContent{
   max-width: 60rem;
+    z-index: 99;
 }
 
 .homeContent h1 {
@@ -656,5 +657,56 @@ span {
         transform: translateX(0);
         transition-delay: .25s;
     }
+    .homeImgHover {
+        pointer-events: none;
+        background: linear-gradient(190deg, #9c7724, #4aa327);
+        opacity: .6;
+    }
+}
+@media (max-width: 520px) {
+    html{
+        font-size: 50%;
+    }
+    .homeContent h1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .homeSci a {
+        width: 38px;
+        height: 38px;
+    }
+}
+@media (max-width: 462px) {
+    .homeContent h1 {
+        font-size: 5.2rem;
+    }
+    .education {
+        padding: 10rem 4% 5rem 5%;
+    }
+    .contact form .inputBox .inputField {
+        width: 100%;
+    }
+    .footer {
+        flex-direction: column-reverse;
+    }
+    .footer p {
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+@media (max-width: 371px) {
+    .home {
+        justify-content: center;
+    }
+    .homeContent {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .homeContent h1 {
+        font-size: 5rem;
+    }
 
+    
 }
