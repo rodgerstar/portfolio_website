@@ -44,3 +44,21 @@ window.onscroll = () => {
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.
     scrollHeight);
  }
+ document.getElementById('contactForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const json = Object.fromEntries(formData.entries());
+
+        const response = await fetch('https://formspree.io/f/xkggypap', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(json)
+        });
+
+        if (response.ok) {
+            alert('Message sent successfully!');
+        } else {
+            alert('Failed to send the message. Please try again later.');
+        }
+    });

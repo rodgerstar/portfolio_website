@@ -222,48 +222,45 @@
 
 <section class="contact" id="contact">
     <h2 class="heading"> Contact <span>Me !</span><span class="animate scroll" style="--i:1;"></span></h2>
-    <form action="https://formspree.io/f/xkggypap" method="POST">
+    <form id="contactForm">
         <div class="inputBox">
             <div class="inputField">
-                <input type="text" placeholder="Your Name" required>
+                <input type="text" name="name" placeholder="Your Name" required>
                 <span class="focus"></span>
             </div>
             <div class="inputField">
-                <input type="text" placeholder="Email Address" required>
+                <input type="email" name="email" placeholder="Email Address" required>
                 <span class="focus"></span>
             </div>
             <span class="animate scroll" style="--i:2;"></span>
         </div>
 
-
-
         <div class="inputBox">
             <div class="inputField">
-                <input type="number" placeholder="Mobile Number" required>
+                <input type="number" name="mobile" placeholder="Mobile Number" required>
                 <span class="focus"></span>
             </div>
             <div class="inputField">
-                <input type="text" placeholder="Email Subject" required>
+                <input type="text" name="subject" placeholder="Email Subject" required>
                 <span class="focus"></span>
             </div>
-
             <span class="animate scroll" style="--i:5;"></span>
         </div>
 
         <div class="textareaField">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
             <span class="focus"></span>
-
             <span class="animate scroll" style="--i:7;"></span>
         </div>
 
         <div class="btnBox btns">
             <button type="submit" class="btn">Submit</button>
-
             <span class="animate scroll" style="--i:9;"></span>
         </div>
     </form>
 </section>
+
+
 
 <footer class="footer">
     <div class="footerText">
