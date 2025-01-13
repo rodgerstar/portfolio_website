@@ -41,6 +41,9 @@ body{
     align-items: center;
     z-index: 100;
 }
+.header.sticky {
+    background: linear-gradient(-190deg, #4a3a0d, #1b490b);
+}
 
 
 .logo{
@@ -93,7 +96,6 @@ section{
     line-height: 1.2;
 }
 
-
 .homeContent .textAnimate{
     position: relative;
     width: 32.8rem;
@@ -109,6 +111,7 @@ section{
 .homeContent p{
     font-size: 1.5rem;
     margin: 2rem 0 4rem;
+    color: var(--main-color);
 }
 
 .btnBox{
@@ -577,4 +580,81 @@ span {
 }
 .footerIconTop a:hover i {
     color: var(--main-color);
+}
+
+/* BreakPoints */
+@media (max-width: 1200px) {
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 4%;
+    }
+    section {
+        padding: 10rem 4% 2rem;
+    }
+    .home {
+        padding: 0 4%;
+    }
+    .footer {
+        padding: 2rem 4%;
+    }
+}
+@media (max-width: 768px) {
+    .header {
+        background: linear-gradient(190deg, #000000, #215c0c,#4a3a0d);
+    }
+    #menu-icon {
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: linear-gradient(240deg, #1a400c, #a3810a, #a3810a, #a3810a);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        transition: .23s ease;
+        transition-delay: .25s;
+        z-index: 1;
+    }
+    .navbar.active {
+        left: 0;
+        transition-delay: 0s;
+    }
+    .navbar .activeNav{
+       position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(-240deg, #000000, #112b08,#4a3a0d, #000000);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active .activeNav {
+        transition-delay: .25s;
+        left: 0;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        transform: translateX(-20rem);
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active a {
+        transform: translateX(0);
+        transition-delay: .25s;
+    }
+
 }
